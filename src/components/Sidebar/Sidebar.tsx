@@ -1,13 +1,15 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import NotificationDropdown from "@/components/Dropdowns/TableDropdown";
 import UserDropdown from "@/components/Dropdowns/UserDropdown";
+import { usePathname } from "next/navigation";
 
 
 export default function Sidebar() {
   const [collapseShow, setCollapseShow] = React.useState("hidden");
-  const router = useRouter();
+  const pathname = usePathname();
   return (
     <>
       <nav
@@ -94,7 +96,7 @@ export default function Sidebar() {
                   <p
                     className={
                       "text-xs uppercase py-3 font-bold block " +
-                      (router.pathname.indexOf("/admin/dashboard") !== -1
+                      (pathname?.indexOf("/admin/dashboard") !== -1
                         ? "text-sky-500 hover:text-sky-600"
                         : "text-slate-700 hover:text-slate-500")
                     }
@@ -102,7 +104,7 @@ export default function Sidebar() {
                     <i
                       className={
                         "fas fa-tv mr-2 text-sm " +
-                        (router.pathname.indexOf("/admin/dashboard") !== -1
+                        (pathname?.indexOf("/admin/dashboard") !== -1
                           ? "opacity-75"
                           : "text-slate-300")
                       }
@@ -117,7 +119,7 @@ export default function Sidebar() {
                   <p
                     className={
                       "text-xs uppercase py-3 font-bold block " +
-                      (router.pathname.indexOf("/admin/settings") !== -1
+                      (pathname?.indexOf("/admin/settings") !== -1
                         ? "text-sky-500 hover:text-sky-600"
                         : "text-slate-700 hover:text-slate-500")
                     }
@@ -125,7 +127,7 @@ export default function Sidebar() {
                     <i
                       className={
                         "fas fa-tools mr-2 text-sm " +
-                        (router.pathname.indexOf("/admin/settings") !== -1
+                        (pathname?.indexOf("/admin/settings") !== -1
                           ? "opacity-75"
                           : "text-slate-300")
                       }
@@ -140,7 +142,7 @@ export default function Sidebar() {
                   <p
                     className={
                       "text-xs uppercase py-3 font-bold block " +
-                      (router.pathname.indexOf("/admin/tables") !== -1
+                      (pathname?.indexOf("/admin/tables") !== -1
                         ? "text-sky-500 hover:text-sky-600"
                         : "text-slate-700 hover:text-slate-500")
                     }
@@ -148,7 +150,7 @@ export default function Sidebar() {
                     <i
                       className={
                         "fas fa-table mr-2 text-sm " +
-                        (router.pathname.indexOf("/admin/tables") !== -1
+                        (pathname?.indexOf("/admin/tables") !== -1
                           ? "opacity-75"
                           : "text-slate-300")
                       }
@@ -163,7 +165,7 @@ export default function Sidebar() {
                   <p
                     className={
                       "text-xs uppercase py-3 font-bold block " +
-                      (router.pathname.indexOf("/admin/maps") !== -1
+                      (pathname?.indexOf("/admin/maps") !== -1
                         ? "text-sky-500 hover:text-sky-600"
                         : "text-slate-700 hover:text-slate-500")
                     }
@@ -171,7 +173,7 @@ export default function Sidebar() {
                     <i
                       className={
                         "fas fa-map-marked mr-2 text-sm " +
-                        (router.pathname.indexOf("/admin/maps") !== -1
+                        (pathname?.indexOf("/admin/maps") !== -1
                           ? "opacity-75"
                           : "text-slate-300")
                       }
