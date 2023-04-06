@@ -159,29 +159,6 @@ export default function Sidebar() {
                   </p>
                 </Link>
               </li>
-
-              <li className="items-center">
-                <Link href="/admin/maps">
-                  <p
-                    className={
-                      "text-xs uppercase py-3 font-bold block " +
-                      (pathname?.indexOf("/admin/maps") !== -1
-                        ? "text-sky-500 hover:text-sky-600"
-                        : "text-slate-700 hover:text-slate-500")
-                    }
-                  >
-                    <i
-                      className={
-                        "fas fa-map-marked mr-2 text-sm " +
-                        (pathname?.indexOf("/admin/maps") !== -1
-                          ? "opacity-75"
-                          : "text-slate-300")
-                      }
-                    ></i>{" "}
-                    Maps
-                  </p>
-                </Link>
-              </li>
             </ul>
 
             {/* Divider */}

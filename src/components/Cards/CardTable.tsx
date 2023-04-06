@@ -2,8 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import TableDropdown from "@/components/Dropdowns/TableDropdown";
 
-// components
-
 
 export default function CardTable({ color }: { color: string }) {
   return (

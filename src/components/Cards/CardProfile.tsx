@@ -70,7 +70,6 @@ export default function CardProfile() {
                 <a
                   href="#pablo"
                   className="font-normal text-sky-500"
-                  onClick={(e) => e.preventDefault()}
                 >
                   Show more
                 </a>
